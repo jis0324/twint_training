@@ -23,6 +23,9 @@ class Profile:
   def get_user_profile(self, username):
     # Configure
     c = twint.Config()
+    c.Username = username
+    c.Store_object = True
+    twint.run.Lookup(c)
     # c.Username = username
     # c.User_full = True
     # c.Custom["user"] = ["bio"]
@@ -38,10 +41,6 @@ class Profile:
     # c.Limit = 10
     # c.Store_csv = True
     # c.Output = "users.csv"
-    c.Username = "guitarrasfoda"
-    c.Store_object = True
-    twint.run.Lookup(c)
-    
     # Run
     # twint.run.Lookup(c)
     # twint.run.Profile(c)
