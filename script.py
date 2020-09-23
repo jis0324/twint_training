@@ -24,7 +24,7 @@ class Profile:
     # Configure
     c = twint.Config()
     c.Username = username
-    c.Store_object = True
+    c.Format = "ID {id} | Username {username}"
     twint.run.Lookup(c)
     # c.Username = username
     # c.User_full = True
